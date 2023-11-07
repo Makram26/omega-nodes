@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+.omega-banner {
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+.omega-banner::before {
+  content: "";
+  position: absolute;
+  left: -100px;
+  bottom: 50%;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(93.51deg, #9b51e0 2.84%, #3081ed 99.18%);
+  -webkit-filter: blur(150px);
+  filter: blur(150px);
+  -webkit-transform: rotate(-45deg) translateY(-50%);
+  transform: rotate(-45deg) translateY(-50%);
+}
+.omega-banner h2 {
+  text-transform: uppercase;
+  margin-bottom: 80px;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 70px;
+  margin-bottom: 60px;
+  /* font-family: 'Lato', sans-serif; */
+}
+.omega-card {
+  width: 600px;
+  /* min-width: 500px; */
+  height: max-content;
+  padding: 5px 20px 20px;
+  box-shadow: rgb(214 214 214 / 17%) 2.01px -2.01px 20px inset,
+    rgb(255 255 255 / 39%) -3.01333px 3.01333px 3.01333px inset !important;
+  backdrop-filter: blur(74.4293px) !important;
+  background: rgba(255, 255, 255, 0.094) !important;
+  border-radius: 10px !important;
+}
+.nft-img {
+  text-align: center;
+}
+.nft-img img {
+  width: 85%;
+  margin-top: -55px;
+  margin-bottom: -65px;
+}
+.omega-card .actions {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.omega-card .actions button {
+  border: none;
+  color: #000;
+  font-size: 1.2em !important;
+  background-color: #03db8a;
+  padding: 10px 40px;
+  width: max-content;
+  margin: 40px auto;
+  display: block;
+  width: 100%;
+  font-weight: 500;
+  line-height: 1.75;
+  border-radius: 4px;
+  letter-spacing: 0.02857em;
+  font-family: "Helvetica", "Arial", sans-serif;
+  margin-bottom: 10px;
+}
+
+/* Media Screens */
+@media only screen and (max-width: 1400px) {
+  .omega-banner h2 {
+    font-size: 50px;
+    margin-bottom: 25px;
+    line-height: 60px;
+  }
+  .nft-img img {
+    width: 70%;
+    margin-top: -45px;
+    margin-bottom: -60px;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .omega-card {
+    width: 95%;
+    padding-top: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .omega-banner h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+    line-height: 50px;
+  }
+}
+@media only screen and (max-width: 767px) and (orientation: landscape){
+    .omega-banner{
+        height: 100%;
+        overflow-y: scroll;
+        padding: 40px 0;
+    }
+}

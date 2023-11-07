@@ -1,0 +1,596 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+*,*::before,*::after{
+  box-sizing: border-box;
+}
+/* Body */
+body{
+  background-image: url('/public/images/home_bg.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+
+.alert-add{
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0,0,0,0.3);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.alert-box{
+  position: relative;
+  width: 550px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 40px 0px rgba(255,255,255,0.3);
+  padding: 35px 20px;
+  text-align: center;
+}
+.hide_alert_box{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  background-color: #000;
+  color: #fff;
+  width: 25px;
+  height: 25px;
+  display: grid;
+  place-items: center;
+  font-weight: 400;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.alert-box h2{
+  color: #000;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 35px;
+}
+
+
+
+/* Navbar */
+.navbar .navbar-brand img{
+  width: 150px;
+}
+.navbar button[data-bs-toggle="collapse"]{
+  box-shadow: unset;
+  margin-left: 20px;
+  border: none;
+}
+.navbar button[data-bs-toggle="collapse"] .toggle_btn_custom {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+.navbar button[data-bs-toggle="collapse"] .toggle_btn_custom span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  margin: 4px 0;
+  transition: all 0.5s ease;
+}
+.navbar button[aria-expanded="true"] .toggle_btn_custom span:first-child {
+  transform: translateY(7px) rotate(45deg);
+}
+.navbar button[aria-expanded="true"] .toggle_btn_custom span:nth-child(2) {
+  opacity: 0;
+}
+.navbar button[aria-expanded="true"] .toggle_btn_custom span:last-child {
+  transform: translateY(-5px) rotate(-45deg);
+}
+.navbar .nav-link{
+  font-weight: 500;
+  font-size: 16px;
+  color: #CECECE;
+  line-height: 24px;
+}
+.navbar .nav-item{
+  margin-right: 35px;
+}
+.navbar .nav-item:nth-child(5){
+  margin-right: 15px;
+  border-radius: 10px;
+  transition: all 0.5s ease;
+}
+.navbar .nav-item:nth-child(5):hover {
+  background-color: #AD6CCA;
+}
+.navbar .nav-item:last-child{
+  margin-right: 0px;
+}
+.navbar .nav-link[_role="button"]{
+  border: 2px solid #AD6CCA;
+  color: #fff;
+  padding: 10px 50px;
+  border-radius: 10px;
+}
+.navbar .nav-item:nth-child(5):hover .nav-link[_role="button"] {
+  color: #fff;
+  font-weight: 500;
+}
+.navbar .nav-link[_role="quick-link"] {
+  color: #C5222D;
+  font-size: 18px;
+}
+.navbar .nav-link[_role="quick-link"]:hover{
+  color: #fff;
+  font-weight: 500;
+}
+.navbar .nav-link.active,.navbar .nav-link:hover,.navbar .nav-link:focus{
+  color: #AD6CCA;
+  font-weight: 600;
+}
+/* Solana RPC */
+.solana-rpc{
+  padding: 50px 0;
+}
+.solana-rpc p{
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 700;
+  color: #fff;
+}
+.solana-rpc p span{
+  color: #C763F3;
+}
+.solana-rpc button{
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 35px;
+  color: #DEAAF5;
+  background-color: #0F0F16;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+/* Node Locations */
+.node-locations{
+  padding: 80px 100px;
+}
+.dual-headings{
+  text-align: center;
+}
+.dual-headings h4{
+  font-size: 27px;
+  font-weight: 600;
+  line-height: 40px;
+  color: #BE1622;
+}
+.dual-headings h2{
+  margin-top: -15px;
+}
+.dual-headings h2,h2{
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 70px;
+  color: #FFFFFF;
+}
+.node-locations .row{
+  margin-top: 30px;
+}
+.node-locations .country-info{
+  background-color: #0F0F16;
+  text-align: center;
+  margin-right: 20px;
+  padding: 15px 0;
+  border-radius: 10px;
+}
+.node-locations .country-info:last-child{
+  margin-right: 0px;
+}
+/* Special About Our Nodes */
+.special-about-nodes{
+  padding-bottom: 50px;
+  padding: 0 50px;
+}
+.rec-bg{
+  position: relative;
+}
+.rec-bg::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 50px;
+  background: linear-gradient(93.51deg, #9B51E0 2.84%, #3081ED 99.18%);
+    filter: blur(90px);
+  border-radius: 10px;
+}
+.special-about-nodes .img-box{
+  text-align: center;
+  margin-top: 50px;
+}
+.special-about-nodes .img-box .img{
+  width: 100%;
+  max-width: 120px;
+  margin: 0 auto;
+}
+.special-about-nodes .img-box .img ._img{
+  background: rgba(255, 255, 255, 0.095);
+  box-shadow: inset 2.01px -2.01px 20px rgba(214, 214, 214, 0.17), inset -3.01333px 3.01333px 3.01333px rgba(255, 255, 255, 0.39);
+  backdrop-filter: blur(74.4293px);
+  border-radius: 26px;
+  height: 120px;
+  display: grid;
+  place-items: center;
+}
+.special-about-nodes .img-box h4{
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #FFFFFF;
+  margin-top: 20px;
+}
+/* Minted NFT */
+.minted-nft{
+  position: relative;
+  margin: 30px 0;
+}
+.minted-nft::before{
+  content: '';
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background-image: url(/public/images/bg_1.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: right center;
+  width: 100%;
+  height: 430px;
+  z-index: -1;
+}
+.minted-nft .container{
+  padding: 50px 50px;
+}
+.client-img{
+  margin: 30px 0;
+  margin-bottom: 100px;
+  text-align: center;
+}
+.client-img img{
+  width: 175px;
+  height: 175px;
+}
+/* Socials */
+.socials{
+  padding: 80px 120px;
+}
+/* Prices */
+.prices{
+  background: rgba(31, 42, 55, 0.9);  
+  backdrop-filter: blur(35px);
+}
+.prices .container{
+  padding: 30px 120px;
+}
+.price-card{
+  text-align: left;
+}
+.price-card{
+  padding: 0 80px;
+}
+.pl_0{
+  padding-left: 0px;
+}
+.pl_150{
+  padding-left: 150px;
+}
+.price-card .price h4, .price-card .price a{
+  font-family: 'Inter', sans-serif;
+  color: #FFFFFF;
+}
+.price-card .price h4{
+  font-size: 16px;
+  line-height: 25px;
+  margin-top: 15px;
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+.price-card .price a{
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 400;
+}
+.price-card .price a i{
+  font-weight: 400;
+  transition: all 0.5s ease;
+}
+.price-card .price a:hover i{
+  transform: translateX(5px);
+}
+/* Footer */
+.footer{
+  padding: 50px 100px;
+}
+.footer .pl_60{
+  padding-left: 60px;
+}
+.footer .pl_40{
+  padding-left: 40px;
+}
+.footer img{
+  width: 220px;
+  height: 100px;
+}
+.footer p{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.d_none{
+  display: none;
+}
+.footer h4{
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 30px;
+  color: #FFFFFF;
+}
+.footer ul{
+  padding: 0;
+}
+.footer li{
+  list-style: none;
+  padding: 5px 0;
+}
+.footer li a{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 22px;
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+
+/* Media Screens */
+@media only screen and (max-width: 1400px){
+  /* Solana RPC */
+  .solana-rpc p{
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .solana-rpc button{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .dual-headings h2,h2{
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+@media only screen and (max-width: 1100px){
+  /* Node Locations */
+  .node-locations{
+    padding: 80px 10px;
+  }
+  /* Minted NFTs */
+  .proof img{
+    width: 100%;
+  }
+  /* Socials */
+  .socials {
+    padding: 50px 40px;
+  }
+  .follow-us img{
+    width: 100%;
+  }
+  .dual-headings h2,h2 {
+    font-size: 30px;
+    line-height: 45px;
+  }
+  /* Prices */
+  .price-card{
+    padding-left: 0px;
+  }
+  /* Footer */
+  .footer{
+    padding: 80px 30px;
+  }
+  .intro img{
+    width: 100%;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 992px){
+  /* Navbar */
+  #navbarNodesNinja{
+    background-color: #fff;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  .navbar button[data-bs-toggle="collapse"] {
+    margin-left: 10px;
+  }
+  .navbar-nav .nav-item{
+    margin: 0;
+  }
+  .navbar .nav-link[_role="button"]{
+    display: none;
+  }
+  .navbar .nav-link[_role_btn="nav-btn"]{
+    display: block;
+    padding: 10px 40px;
+    transition: all 0.5s ease;
+  }
+  .navbar .nav-item:hover .nav-link[_role_btn="nav-btn"]{
+    background-color: #AD6CCA;
+    color: #fff;
+    font-weight: 400;
+  }
+  /* Solana RPC */
+    .solana-rpc p{
+      font-size: 20px;
+      line-height: 35px;
+    }
+  .solana-rpc img {
+    width: 100%;
+  }
+  /* Node Locations */
+  .node-locations {
+    padding: 30px 0px;
+  }
+  .node-locations .country-info{
+    margin-bottom: 10px;
+  }
+  .node-locations .row:last-child{
+    margin-top: 0px !important;
+  }
+  .dual-headings h2{
+    margin-top: -5px;
+  }
+  /* Special About Nodes */
+  .special-about-nodes{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  /* Minted NFTS */
+  .client-img img{
+    width: 120px;
+    height: 120px;
+  }
+  .proof img{
+    width: 100%;
+  }
+  /* Socials */
+  .socials{
+    padding: 0 50px;
+  }
+  .follow-us img{
+    width: 100%;
+  }
+  .dual-headings h2,h2{
+    font-size: 28px;
+    line-height: 40px;
+  }
+  /* Prices */
+  .price-card{
+    padding: 0px;
+  }
+  /* Footer */
+  .footer{
+    padding: 50px 30px;
+  }
+  .footer :is(.col-md-12,.pl_60,.pl_40){
+    padding: 0px;
+  }
+  .d_none{
+    display: block;
+  }
+  .intro{
+    text-align: center;
+  }
+    .intro img {
+      width: 220px;
+      height: 100px;
+    }
+}
+@media only screen and (max-width: 767px){
+  /* Solana RPC */
+  .solana-rpc{
+    text-align: center;
+    padding: 5px 0;
+  }
+    .solana-rpc .col-sm-12{
+      width: 100%;
+    }
+  .solana-rpc :is(p,button) {
+    font-size: 18px;
+    line-height: 30px;
+  }
+  .solana-rpc img {
+    margin-top: 40px;
+  }
+  /* Node Locations */
+  .dual-headings h4{
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .dual-headings h2,h2 {
+    font-size: 25px;
+    line-height: 35px;
+  }
+  /* Special About Our Nodes */
+  .col-sm-12 {
+    width: 50%;
+  }
+  /* Minted NFTs */
+  .minted-nft .container{
+    padding: 0;
+  }
+  .client-img{
+    margin-bottom: 0px;
+  }
+  .proof{
+    margin-top: 40px;
+  }
+  .proof img{
+    width: 100%;
+    padding: 0 30px;
+  }
+  /* Socials */
+  .socials{
+    padding: 0;
+    padding: 0 20px;
+    text-align: center;
+  }
+  .socials .col-sm-12{
+    width: 100%;
+  }
+  .follow-us img{
+    width: 100px;
+    margin-top: 20px;
+  }
+  .justify_content_md_center{
+    justify-content: center !important;
+  }
+  /* Prices */
+  .prices .container {
+    padding: 30px 60px;
+  }
+  .prices .col-sm-12{
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  .price-card .price h4{
+    margin-bottom: 10px;
+  }
+  /* Footer */
+  .footer .col-sm-12{
+    padding: 0;
+  }
+  .footer .col-sm-12:first-child{
+    width: 100%;
+  }
+  .d_none{
+    display: none;
+  }
+}
+@media only screen and (min-width: 992px){
+  .d_md_none{
+    display: none;
+  }
+}
